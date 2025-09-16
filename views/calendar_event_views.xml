@@ -1,0 +1,21 @@
+<odoo>
+  <record id="view_calendar_event_form_mb_dd" model="ir.ui.view">
+    <field name="name">calendar.event.form.mb.dd</field>
+    <field name="model">calendar.event</field>
+    <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header" position="inside">
+        <button name="action_mb_open_stems" type="object" class="oe_highlight" string="Stems"/>
+        <button name="action_create_google_meet" type="object" string="Crear Google Meet"/>
+        <button name="%(action_mb_dd_stems)d" type="action" string="Ver todos los Stems" />
+      </xpath>
+      <xpath expr="//sheet/notebook" position="inside">
+        <page string="Stems">
+          <group>
+            <field name="mb_stems_count" readonly="1"/>
+          </group>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>

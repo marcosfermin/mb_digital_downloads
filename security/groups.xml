@@ -1,8 +1,0 @@
-<odoo>
-  <data noupdate="0">
-    <record id="group_mbmusic_team" model="res.groups">
-      <field name="name">Media Bodega – Equipo Música</field>
-      <field name="category_id" ref="base.module_category_services"/>
-    </record>
-  </data>
-</odoo>

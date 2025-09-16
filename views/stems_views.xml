@@ -1,0 +1,51 @@
+<odoo>
+  <record id="view_mb_dd_stems_tree" model="ir.ui.view">
+    <field name="name">mb.dd.stems.tree</field>
+    <field name="model">mb_dd.stems</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="calendar_event_id"/>
+        <field name="file_name"/>
+        <field name="file_size"/>
+        <field name="content_type"/>
+        <field name="uploaded_by_id"/>
+        <field name="create_date"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_mb_dd_stems_form" model="ir.ui.view">
+    <field name="name">mb.dd.stems.form</field>
+    <field name="model">mb_dd.stems</field>
+    <field name="arch" type="xml">
+      <form string="Stems">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="calendar_event_id" required="1"/>
+          </group>
+          <group>
+            <field name="file_name"/>
+            <field name="file_size"/>
+            <field name="content_type"/>
+            <field name="object_key"/>
+            <field name="uploaded_by_id"/>
+          </group>
+          <group>
+            <field name="note"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_mb_dd_stems" model="ir.actions.act_window">
+    <field name="name">Stems</field>
+    <field name="res_model">mb_dd.stems</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_mb_dd_root" name="Media Bodega" sequence="10"/>
+  <menuitem id="menu_mb_dd_stems" name="Stems" parent="menu_mb_dd_root" action="action_mb_dd_stems" sequence="20"/>
+</odoo>

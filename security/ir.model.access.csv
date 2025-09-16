@@ -1,4 +1,2 @@
-"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_digital_delivery_user","digital.delivery user","model_digital_delivery","base.group_user",1,1,1,0
-"access_booking_stems_user","booking.stems user","model_booking_stems","base.group_user",1,1,1,0
-"access_booking_stems_manager","booking.stems manager","model_booking_stems","mb_digital_downloads.group_mbmusic_team",1,1,1,1
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mb_dd_stems_user,access_mb_dd_stems_user,model_mb_dd_stems,base.group_user,1,1,1,1
