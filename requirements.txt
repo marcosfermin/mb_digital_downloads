@@ -1,0 +1,5 @@
+# Runtime deps for mb_digital_downloads (Odoo 18, Python 3.10+)
+boto3>=1.34
+google-auth>=2.32.0
+google-auth-oauthlib>=1.2.0
+google-api-python-client>=2.137.0
