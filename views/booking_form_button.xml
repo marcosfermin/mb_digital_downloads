@@ -1,0 +1,19 @@
+<odoo>
+  <data>
+    <record id="view_appointment_booking_form_inherit_mb" model="ir.ui.view">
+      <field name="name">appointment.booking.form.mb.meet</field>
+      <field name="model">appointment.booking</field>
+      <field name="inherit_id" ref="appointment.appointment_booking_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//sheet//header" position="inside">
+          <button name="action_create_google_meet" type="object" string="Crear Google Meet" class="btn-primary" attrs="{'invisible': [('meeting_url','!=',False)]}"/>
+          <button name="open_meet_url" type="object" string="Abrir Meet" class="btn-secondary" attrs="{'invisible': [('meeting_url','=',False)]}"/>
+          <button name="action_export_stems_csv" type="object" string="Exportar Stems (CSV)" class="btn-secondary" groups="mb_digital_downloads.group_mbmusic_team"/>
+        </xpath>
+        <xpath expr="//sheet//group" position="inside">
+          <field name="meeting_url" readonly="1"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

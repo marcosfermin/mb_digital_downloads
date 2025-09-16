@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    <template id="page_club" name="Club Media Bodega" page="True" inherit_id="website.layout">
+      <xpath expr="//main" position="inside">
+        <section id="club" class="o_container mt-4 mb-5">
+          <div class="container">
+            <h1>Club Media Bodega</h1>
+            <t t-if="request.env.user and request.env.user.partner_id.is_subscriber">
+              <p class="lead">¡Bienvenido! Aquí tienes tu contenido exclusivo.</p>
+              <ul>
+                <li><a href="/my/downloads">Packs exclusivos</a></li>
+                <li><a href="/my/bookings">Sesiones mensuales</a></li>
+                <li>Tutoriales premium, descuentos y más…</li>
+              </ul>
+            </t>
+            <t t-else="">
+              <p>Este contenido es exclusivo para miembros del Club.</p>
+              <a class="btn btn-primary" href="/shop">Suscribirme</a>
+              <p class="text-muted mt-2">¿Ya eres miembro? <a href="/web/login">Inicia sesión</a></p>
+            </t>
+          </div>
+        </section>
+      </xpath>
+    </template>
+  </data>
+</odoo>

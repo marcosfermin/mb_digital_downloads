@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+    <record id="appointment_type_form_inherit_mb_stems" model="ir.ui.view">
+      <field name="name">appointment.type.form.mb.stems</field>
+      <field name="model">appointment.type</field>
+      <field name="inherit_id" ref="appointment.view_appointment_type_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//sheet//group" position="inside">
+          <group string="Stems">
+            <field name="stems_max_mb"/>
+            <field name="stems_total_quota_mb"/>
+          </group>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
